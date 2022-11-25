@@ -1,3 +1,6 @@
+<?php
+    use Illuminate\Support\Str;
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,5 +23,14 @@
             }
         </style>
     </head>
-    <body>welcome</body>
+    <body>
+    <ul>
+    @foreach($movies as $movie)
+        <li>
+           <h2><a href = "{{route('single-movie' , ['id' => $movie->id])}}">{{$movie->title}}</a></h2> {{$movie->storyline}}
+           <br><br><br>
+        </li>
+    @endforeach
+    </ul>
+    </body>
 </html>

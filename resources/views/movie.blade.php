@@ -1,3 +1,6 @@
+<?php
+    use Illuminate\Support\Str;
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -20,5 +23,18 @@
             }
         </style>
     </head>
-    <body>welcome</body>
+    <body>
+        <h2>
+            {{$movie->title}} movie from {{$movie["release date"]}} by {{$movie->director}}
+        </h2>
+        <p>
+            {{$movie->storyline}}
+        </p>
+        <br>
+        <h3>
+            Genres: @foreach(explode(',',($movie->genre),100) as $genre)
+                {{$genre}}
+            @endforeach
+        </h3>
+    </body>
 </html>
