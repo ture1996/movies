@@ -10,13 +10,13 @@ class MoviesController extends Controller
     public function index(){
         $movies = Movie::all();
 
-        return view('movies', compact('movies'));
+        return view('movies.movies', compact('movies'));
     }
 
     public function show($id){
         $movie = Movie::find($id);
 
-        return view('movie', compact('movie'));
+        return view('movies.movie', compact('movie'));
     }
 
 
