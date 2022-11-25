@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('genre');
             $table->string('director');
-            $table->integer('release date');
+            $table->integer('release_date');
             $table->longText('storyline');
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_movies');
+        Schema::dropIfExists('movies');
     }
 };

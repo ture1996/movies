@@ -9,4 +9,7 @@ class Movie extends Model{
 
     use HasFactory;
 
+    protected $fillable = ['title', 'genre','director','release_date','storyline'];
+
+    public $timestamps = false;
 }

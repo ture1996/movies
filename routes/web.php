@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MoviesController;
+use App\Models\Movie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,11 @@ use App\Http\Controllers\MoviesController;
 
 Route::get('/movies', [MoviesController::class , 'index']);
 
+Route::get('/movies/create', [MoviesController::class, 'create']);
+
+Route::post('/movies', [MoviesController::class, 'store']);
+
 Route::get('/movies/{id}', [MoviesController::class, 'show'])->name('single-movie');
 
-Route::get('/create', [MoviesController::class, 'create']);
+
+

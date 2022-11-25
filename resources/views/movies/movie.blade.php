@@ -4,7 +4,7 @@
 
 @section('content')
         <h2>
-            {{$movie->title}} movie from {{$movie["release date"]}} by {{$movie->director}}
+            {{$movie->title}} movie from {{$movie->release_date}} by {{$movie->director}}
         </h2>
         <p>
         <br>
