@@ -14,6 +14,27 @@
             {{$movie->storyline}}
         </p>
         <br>
+
+        <h5>Comments:</h5>
+        <br>
+        <br>
+        <dl>
+            @foreach($movie->comments as $comment)
+                <dt>
+                    <p style="font-size:20px">
+                        {{$comment->content}}
+                    </p>
+                </dt>
+                <dd>
+                    <h6>
+                        {{$comment->created_at}}
+                    </h6>
+                </dd>
+                <br>
+                <br>
+            @endforeach
+        </dl>
+
         <h5>
             Genres: @foreach(explode(',',($movie->genre),100) as $genre)
                 {{$genre}}

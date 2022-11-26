@@ -12,4 +12,8 @@ class Movie extends Model{
     protected $fillable = ['title', 'genre','director','release_date','storyline'];
 
     public $timestamps = false;
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
 }

@@ -42,7 +42,7 @@
 
         <div class="justAnotherDiv">
             <label for="newFormControlInput4" class="form-label">
-                Release_date
+                Release date
             </label>
             <input type="number" name ="release_date" class="form-control" id="newFormControlInput4">
         </div>
