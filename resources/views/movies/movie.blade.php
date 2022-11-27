@@ -37,8 +37,8 @@
         
         <h5>
             Genres: 
-            @foreach(explode(',',($movie->genre),100) as $genre)
-                {{$genre}}
+            @foreach(explode(', ',($movie->genre),100) as $genre)
+                <a href = "{{route('genre-movies', ['genre' => $genre])}}">{{$genre}}</a>
             @endforeach
         </h5>
 @endsection

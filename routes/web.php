@@ -5,6 +5,7 @@ use App\Http\Controllers\MoviesController;
 use App\Models\Movie;
 use App\Http\Controllers\CommentsController;
 use App\Models\Comment;
+use App\Http\Controllers\GenresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,4 @@ Route::get('/movies/{id}/comments', [MoviesController::class , 'show']);
 
 Route::post('/comment/add', [CommentsController::class, 'store'])->name('movie-comments');
 
+Route::get('genres/{genre}', [GenresController::class , 'show'])->name('genre-movies');
