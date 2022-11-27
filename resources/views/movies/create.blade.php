@@ -22,7 +22,7 @@
             <label for="newFormControlInput2" class="form-label">
                 Genre
             </label>
-            <input type="text" name ="genre" class="form-control" id="newFormControlInput2" placeholder="Genre">
+            <input type="text" name ="genre" class="form-control" id="newFormControlInput2" placeholder="Genre, genre, genre">
         </div>
 
         @error('genre')

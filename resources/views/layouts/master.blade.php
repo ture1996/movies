@@ -35,7 +35,6 @@
         </div>
       </div>
     </div>
-
     <main role="main" class="container">
       <div class="row">
         <div class="col-md-8 blog-main">
@@ -43,8 +42,10 @@
                 @yield('content')
             </div>
         </div><!-- /.blog-main -->
-      </div><!-- /.row -->
+                @yield('sidebar-content')
+        </div><!-- /.row -->
     </main><!-- /.container -->
+
 
     @include('partials.footer')
   </body>

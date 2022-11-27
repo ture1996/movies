@@ -40,9 +40,12 @@
         <label for="newFormControlTextarea1" class="form-label">
             Movie:
         </label>
+        
         <select name="movie_id" class="form-control" size="Number_of_options" id="newFormControlSelect1">
+        
             @foreach($movies as $add)
-                <option value={{$add->comments[0]->movie_id}}>
+
+                <option value={{$add->id}}>
                     {{$add->title}}
                 </option>
             @endforeach

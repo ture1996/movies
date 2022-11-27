@@ -1,5 +1,6 @@
 @extends('layouts.master')
 
+
 @section('title', 'Movies')
 
 @section('content')
@@ -20,4 +21,10 @@
         </dd>
     @endforeach
     </dl>
+
+@endsection
+
+
+@section('sidebar-content')
+    @include('partials.sidebar')
 @endsection
