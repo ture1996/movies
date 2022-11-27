@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model{
 
     use HasFactory;
+    
+    public $timestamps = false;
 
-    protected $fillable = [];
+    protected $fillable = ['content', 'movie_id'];
 }

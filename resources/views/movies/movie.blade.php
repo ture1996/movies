@@ -34,9 +34,10 @@
                 <br>
             @endforeach
         </dl>
-
+        
         <h5>
-            Genres: @foreach(explode(',',($movie->genre),100) as $genre)
+            Genres: 
+            @foreach(explode(',',($movie->genre),100) as $genre)
                 {{$genre}}
             @endforeach
         </h5>
